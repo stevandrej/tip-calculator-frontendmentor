@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="scss/main.css" />
+
+        <title>Frontend Mentor | Tip calculator app</title>
+
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <style>
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+            }
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="logo">
+                <img
+                    src="./images/logo.svg"
+                    alt="Splitter logo"
+                    class="logo__img"
+                    width="90px"
+                />
+            </div>
+
+            <main class="calculator">
+                <!--LEFT-->
+                <div class="panel panel--inputs">
+                    <div class="fields_group bill">
+                        <label for="bill" class="bill__label">Bill</label>
+                        <input
+                            name="bill"
+                            id="bill"
+                            class="bill__input"
+                            pattern="[0-9. -]*"
+                        />
+                    </div>
+                    <div class="fields_group tip">
+                        <label class="tip__label">Select Tip %</label>
+                        <ul class="tip__grid">
+                            <li
+                                class="tip__value tip__value--predefined"
+                                data-value="5"
+                            >
+                                5%
+                            </li>
+                            <li
+                                class="tip__value tip__value--predefined"
+                                data-value="10"
+                            >
+                                10%
+                            </li>
+                            <li
+                                class="tip__value tip__value--predefined"
+                                data-value="15"
+                            >
+                                15%
+                            </li>
+                            <li
+                                class="tip__value tip__value--predefined"
+                                data-value="25"
+                            >
+                                25%
+                            </li>
+                            <li
+                                class="tip__value tip__value--predefined"
+                                data-value="50"
+                            >
+                                50%
+                            </li>
+                            <li
+                                class="tip__value tip__value--custom"
+                                data-value="custom"
+                            >
+                                <input
+                                    type="text"
+                                    id="input_tip"
+                                    placeholder="Custom"
+                                />
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="fields_group people">
+                        <label for="people" class="people__label">
+                            Number of People
+                        </label>
+                        <input type="text" id="people" class="people__input" />
+                    </div>
+                </div>
+
+                <!--RIGHT-->
+                <div class="panel panel--results">
+                    <div class="content">
+                        <div class="result-item">
+                            <div class="result-item__name">
+                                <div class="result-item__name__heading">
+                                    Tip Amount
+                                </div>
+                                <div class="result-item__name__subheading">
+                                    / person
+                                </div>
+                            </div>
+                            <div class="result-item__result" id="result-tip">
+                                $0
+                            </div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-item__name">
+                                <div class="result-item__name__heading">
+                                    Total
+                                </div>
+                                <div class="result-item__name__subheading">
+                                    / person
+                                </div>
+                            </div>
+                            <div class="result-item__result" id="result-total">
+                                $0
+                            </div>
+                        </div>
+                        <button class="btn btn--reset" disabled>Reset</button>
+                    </div>
+                </div>
+            </main>
+            <div class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >. Coded by <a href="#">Your Name Here</a>.
+            </div>
+        </div>
+    </body>
+    <script src="./js/script.js" type="module"></script>
+</html>
